@@ -1,0 +1,65 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #333;
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+header p {
+    margin: 5px 0;
+}
+
+section {
+    padding: 50px 20px;
+}
+
+h2 {
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+
+#projects {
+    background-color: #f4f4f4;
+    position: relative;
+}
+
+#project-slider {
+    overflow: hidden;
+    position: relative;
+    padding: 0 20px; /* Adiciona um espaçamento nas laterais do #project-slider */
+}
+
+#project-slider .swiper-button-next,
+#project-slider .swiper-button-prev {
+    font-size: 18px;
+    color: #007BFF;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#project-slider .swiper-button-next:hover,
+#project-slider .swiper-button-prev:hover {
+    color: #0056b3;
+}
+
+#project-slider .swiper-button-next {
+    right: 10px;
+}
+
+#project-slider .swiper-button-prev {
+    left: 10px;
+}
