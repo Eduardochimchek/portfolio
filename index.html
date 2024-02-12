@@ -1,47 +1,384 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Eduardo Chimchek Jeronimo - Portfolio</title>
-
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="index.css">
-
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="index.js"></script>
-    <title>Eduardo Chimchek Jeronimo - Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="author" content="Eduardo Chimchek Jeronimo" />
+  <meta name="description"
+    content="Meu nome é Eduardo, com capacitação em Desenvolvimento Front-end e Back-end. Meu objetivo é desenvolver interfaces mais modernas ede alta qualidade, que combinem desempenho, animações suaves, responsividade e otimização." />
+  <meta name="keywords"
+    content="sites, aplicativo, front end, back-end, programador web, Eduardo, Chimchek, Jeronimo, Portfolio, Eduardo Chimchek Jeronimo,Edu,Eduardo web, Eduardo programador, Eduardo Jeronimo, Eduardo site, Eduardo github, Eduardo Chimchek portfolio,web, desenvolvimento, frontend, Dudu, front-end, freelancer, freela, website, portfólio, Eduardo Chimchek Jeronimo, Eduardo Chimchek Jeronimo" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#3fb9ff" />
+  <meta name="copyright" content="Eduardo Chimchek Jeronimo 2023" />
+  <meta http-equiv="content-language" content="pt-br" />
+  <meta property="og:image" content="https://daanrox.com/assets/image/preview.png" />
+  <meta property="og:title" content="Eduardo Chimchek Jeronimo" />
+  <meta property="og:description" content="Eduardo Chimchek Jeronimo" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="shortcut icon" href="./assets/image/logo-page.png" type="image/x-icon" />
+  <link rel="icon" href="./assets/image/logo-page.png" />
+  <link rel="apple-touch-icon" href="./assets/image/logo-page.png" />
+  <link rel="canonical" href="https://daanrox.com/" />
+  <script src="./assets/js/svg-inject.min.js"></script>
+  <title>
+    Eduardo Chimchek Jeronimo
+  </title>
 </head>
+
 <body>
-    <header>
-        <h1>Eduardo Chimchek Jeronimo</h1>
-        <p>Desenvolvedor Full-stack</p>
-    </header>
-    
-    <section id="about">
-        <h2>Sobre Mim</h2>
-        <p>.</p>
-    </section>
-    
-    <section id="projects">
-        <h2>Projetos</h2>
-        <div id="project-slider" class="swiper-container">
-            <div class="swiper-wrapper" id="projects-container"></div>
-            <!-- Adicione as setas de navegação e a barra de paginação do slider -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
+  <header>
+    <div class="grid-layout">
+      <nav>
+        <img src="./assets/image/daanrox-logo.png" alt="Daanrox" width="180px" height="28px" />
+        <div class="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
         </div>
-    </section>
-    
-    
-    <section id="contact">
-        <h2>Contato</h2>
-        <p>Email: eduardochimcheck@gmail.com</p>
-        <p>GitHub: <a href="https://github.com/Eduardochimchek" target="_blank">Eduardochimchek</a></p>
+        <ul class="nav-list">
+          <li><a href="#s-home">Início</a></li>
+          <li><a href="#s-about">Quem sou</a></li>
+          <li><a href="#s-experience">Experiências</a></li>
+          <li>
+            <a href="#s-projects">Projetos</a>
+          </li>
+          <li>
+            <a href="#s-services">Serviços</a>
+          </li>
+          <li>
+            <a href="#s-skills">Conhecimentos</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    </div>
+  </header>
+
+
+  <main>
+    <section id="s-home">
+      <div class="social-buttons">
+        <div>
+          <a href="https://discord.gg/KfmTyMdPqg" class="social-button discordbutton" target="_blank"><img
+              src="./assets/icons/discordflutuante.svg" alt="Discord"></a>
+        </div>
+        <div>
+          <a href="https://twitter.com/daanrox" class="social-button twitterbutton" target="_blank"><img
+              src="./assets/icons/twitter.svg" alt="Twitter"></a>
+        </div>
+        <div>
+          <a href="https://wa.me/554899931541" class="social-button whatsappbutton" target="_blank"><img
+              src="./assets/icons/whatsapp.svg" alt="Whatsapp"></a>
+        </div>
+      </div>
+      <div class="grid-layout">
+        <div id="home">
+          <div id="home-container-text">
+            <h1 class="delayMediumReveal">
+              Especialista em ajudar empresas a construir
+              <span>soluções digitais</span> de alta qualidade.
+            </h1>
+            <p class="typewriter">
+              Desenvolvimento Frontend utilizando as melhores práticas e tecnologias para criar produtos que sejam
+              funcionais, intuitivos e visualmente atraentes.
+            </p>
+
+            <a href="https://www.instagram.com/Daanrox/" rel="noopener" target="_blank" class="delayExtraBigReveal">
+              Instagram
+            </a>
+          </div>
+
+          <img src="./assets/image/shape-body.png" alt="ícone Daanrox" onload="SVGInject(this)" id="logo" width="500px"
+            height="500px" />
+        </div>
+      </div>
     </section>
 
+    <section id="s-about">
+      <div class="grid-layout">
+        <div>
+          <div id="creator-photo" class="delayMediumReveal">
+          </div>
+          <div>
+            <h4 class="delayMediumReveal">Quem sou</h4>
+            <h2 class="delaySmallReveal">Eduardo Chimchek Jeronimo</h2>
+            <h3 class="delayMediumReveal">
+                Full-Stack Developer
+            </h3>
+
+            <p class="delayLargeReveal">
+              Meu nome é Eduardo, com capacitação em Desenvolvimento Front-end e Back-end. 
+              Meu objetivo é desenvolver interfaces mais modernas e
+              de alta qualidade, que combinem desempenho, animações suaves, responsividade e otimização.
+              <br>
+              <br>
+              Além disso, tenho habilidades na parte de desenvolvimento mobile utilizando AngularJs,
+              para empacotar os aplicativos desenvolvidos tenho praticidade em utilizar o apache cordova,
+              tenho curiosidade em outras tecnologias, atualmente estudo reactJS para ampliar meu conhecimento.
+            </p>
+            <nav class="delayLargeReveal">
+              <ul>
+                <a href="https://www.instagram.com/Eduardo.jero/" rel="noopener" target="_blank">
+                  <li>
+                    <img src="./assets/icons/instagram.svg" alt="Ícone do Instagram" onload="SVGInject(this)" />
+                  </li>
+                </a>
+
+                <a href="https://www.linkedin.com/in/eduardo-chimchek-jeronimo-3539911a2/" rel="noopener" target="_blank">
+                  <li>
+                    <img src="./assets/icons/linkedin.svg" rel="noopener" alt="Ícone do LinkedIn"
+                      onload="SVGInject(this)" />
+                  </li>
+                </a>
+
+                <a href="https://github.com/Daanrox" rel="noopener" target="_blank">
+                  <li>
+                    <img src="./assets/icons/github.svg" alt="Ícone do GitHub" onload="SVGInject(this)" />
+                  </li>
+                </a>
+
+                <a href="https://www.behance.net/Daanrox" rel="noopener" target="_blank">
+                  <li>
+                    <img src="./assets/icons/behance.svg" alt="Ícone do Behance" onload="SVGInject(this)" />
+                  </li>
+                </a>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="s-experience">
+      <div class="grid-layout">
+        <h2 class="delaySmallReveal">Experiências <span>.</span></h2>
+        <div id="experience">
+          <div class="option-experience intervalCardReveal" id="experience-company">
+            <div class="company metaspark activeExperience">
+              <h3>Agrosys</h3>
+            </div>
+            <!-- <div class="company takepic">
+              <h3>TakePic</h3>
+            </div> -->
+          </div>
+          <div class="text-experience intervalCardReveal">
+            <div>
+              <h4 class="titleExperience">
+                Agrosys Tecnologia
+              </h4>
+              <p class="dateExperience">março 2021 - Atualmente</p>
+            </div>
+            <h5 class="companyExperience">Agrosys</h5>
+            <p class="changeExperience">
+                Foi durante meu primeiro estágio que tive a oportunidade de adquirir valiosas lições 
+                sobre comportamento profissional e compreender o funcionamento da engrenagem na minha área. 
+                Durante seis meses de estágio, mergulhei no aprendizado e na execução de tarefas, adaptando 
+                minhas habilidades para ingressar na área de produto. 
+                Foi nesse período que aprendi e apliquei os padrões da empresa, os quais continuei a utilizar 
+                após ser efetivado. Posteriormente, fui efetivado no departamento de tecnologia da empresa, onde atuei como 
+                desenvolvedor full-stack. Foi nesse ambiente que adquiri um vasto conhecimento em template (HTML, CSS, JavaScript), 
+                contribuindo com soluções tanto para uso interno quanto externo da empresa.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="s-projects">
+      <div class="grid-layout">
+        <h2 class="delaySmallReveal">Projetos <span>.</span></h2>
+        <div id="projects">
+          <article class="intervalCardReveal teslabank">
+            <h3>App React</h3>
+            <p>
+              Aplicação desenvolvida em React JS para treinamento, nada muito complexo só aprendendo o basico da ferramenta.
+            </p>
+
+            <a href="https://github.com/Eduardochimchek/AppReact" rel="noopener" target="_blank">Visualizar projeto
+            </a>
+          </article>
+
+          <article class="intervalCardReveal naped">
+            <h3>TrackFlowWeb</h3>
+            <p>
+              Tela web que trabalha junto a uma API que retorna dados de entregas que estão disponibilizadas após realizado o processo do track.
+            </p>
+
+            <a href="https://github.com/Eduardochimchek/TrackFlowWeb" rel="noopener" target="_blank">Visualizar projeto
+            </a>
+          </article>
+
+          <article class="intervalCardReveal efront">
+            <h3>TrackFlow</h3>
+            <p>
+                O TrackFlow é um aplicativo simples e amador de rastreamento de encomendas dos Correios desenvolvido em ReactJS. Ele oferece uma interface fácil de usar para acompanhar o status de suas entregas de forma rápida e eficiente.
+            </p>
+            <a href="https://github.com/Eduardochimchek/TrackFlow" rel="noopener" target="_blank">
+              Visualizar projeto
+            </a>
+          </article>
+        </div>
+        <a href="https://github.com/Eduardochimchek?tab=repositories" rel="noopener" target="_blank"
+          class="delayExtraBigReveal">Repositórios no GitHub</a>
+      </div>
+    </section>
+
+    <section id="s-services">
+      <div class="grid-layout">
+        <h2 class="delaySmallReveal">Serviços <span>.</span></h2>
+        <div id="services">
+          <article class="intervalCardReveal">
+            <div>
+              <img src="./assets/icons/icon-design.svg" width="100px" height="100px" alt="ícone layers" />
+            </div>
+            <h3>UI Design</h3>
+            <p>
+              Desenho interface de forma que ela seja clara, objetiva e
+              principalmente intuitiva para o usuário.
+            </p>
+          </article>
+
+          <article class="intervalCardReveal">
+            <div>
+              <img src="./assets/icons/icon-front.svg" width="100px" height="100px" alt="ícone código" />
+            </div>
+            <h3>Desenvolvimento</h3>
+            <p>
+              Desenvolvo sites profissionais, blogs, portfólios, landing pages
+              e e-commerce.
+            </p>
+          </article>
+
+          <article class="intervalCardReveal">
+            <div>
+              <img src="./assets/icons/icon-app-design.svg" width="100px" height="100px" alt="ícone imagem" />
+            </div>
+            <h3>Motion</h3>
+            <p>
+              Crio interações que transmitem sensação de modernidade, além de
+              chamarem a atenção do usuário.
+            </p>
+          </article>
+
+          <article class="intervalCardReveal">
+            <div>
+              <img src="./assets/icons/filter_icon.png" width="100px" height="100px" alt="ícone filtros" />
+            </div>
+            <h3>Filtros</h3>
+            <p>
+              Desenvolvimento de Filtros para o Instagram e Tiktok. Criação com efeito de cores, harmonização, entre
+              outros projetos estratégicos.
+            </p>
+          </article>
+
+          <article class="intervalCardReveal">
+            <div>
+              <img src="./assets/icons/gif_rocket-daanrox.png" width="100px" height="100px" alt="ícone Gifs" />
+            </div>
+            <h3>Gifs Animados</h3>
+            <p>
+              Criação de figurinhas Gifs para o Instagram. Stickers animados para usar nos Stories.
+            </p>
+          </article>
+
+          <article class="intervalCardReveal">
+            <div>
+              <img src="./assets/icons/mobile-app.png" width="100px" height="100px" alt="ícone App" />
+            </div>
+            <h3>Aplicativos</h3>
+            <p>
+              Desenvolvimento de aplicações para gerenciamento de redes sociais, bot de membros e interações.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="s-skills">
+      <div class="grid-layout">
+        <div id="skills">
+          <article id="skills-text">
+            <h2 class="delaySmallReveal">Conhecimentos <span>.</span></h2>
+            <p class="delayMediumReveal changeDescription">
+              *passe o cursor do mouse no card para ler*
+            </p>
+          </article>
+
+          <div id="skills-cards">
+            <article class="html intervalCardReveal">
+              <img src="./assets/icons/html.svg" width="60px" height="60px" alt="ícone do html" />
+            </article>
+            <article class="css intervalCardReveal">
+              <img src="./assets/icons/css.svg" width="60px" height="60px" alt="ícone do css" />
+            </article>
+            <article class="js intervalCardReveal">
+              <img src="./assets/icons/javascript.svg" width="60px" height="60px" alt="ícone do javascript" />
+            </article>
+            <article class="sass intervalCardReveal">
+              <img src="./assets/icons/sass.svg" width="60px" height="60px" alt="ícone do sass" />
+            </article>
+            <article class="react intervalCardReveal">
+              <img src="./assets/icons/react.svg" width="60px" height="60px" alt="ícone do react" />
+            </article>
+            <article class="next intervalCardReveal">
+              <img src="./assets/icons/next.svg" width="60px" height="60px" alt="ícone do next" />
+            </article>
+            <article class="styled intervalCardReveal">
+              <img src="./assets/icons/styled-components.svg" width="60px" height="60px" alt="ícone do styled" />
+            </article>
+            <article class="tailwind intervalCardReveal">
+              <img src="./assets/icons/tailwindcss.svg" width="60px" height="60px" alt="ícone do tailwind" />
+            </article>
+
+            <article class="radix intervalCardReveal">
+              <img src="./assets/icons/radix.svg" width="60px" height="60px" alt="ícone do radix" />
+            </article>
+
+            <article class="typescript intervalCardReveal">
+              <img src="./assets/icons/typescript.svg" width="60px" height="60px" alt="ícone do typescript" />
+            </article>
+
+            <article class="storybook intervalCardReveal">
+              <img src="./assets/icons/storybook.svg" width="60px" height="60px" alt="ícone do storybook" />
+            </article>
+
+            <article class="cypress intervalCardReveal">
+              <img src="./assets/icons/cypress.svg" width="60px" height="60px" alt="ícone do cypress" />
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="grid-layout">
+        <p>
+          Copyright © 2023
+          <a href="https://Daanrox.com" rel="noopener" target="_blank">
+            Daanrox
+          </a>
+          Todos os direitos reservados.
+        </p>
+
+        <div>
+          <p>Powered by</p>
+          <a href="http://wa.me/554899931541" target="_blank"><img src="./assets/image/rox-footer.png"
+              alt="Logo Daanrox" />
+          </a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+  <script type="module" src="./assets/js/main.js"></script>
+  <audio autoplay loop volume="0.2">
+    <source src="./assets/audio/daanrox site will jay talking to myself.mp3" type="audio/mpeg">
+  </audio>
 </body>
+
 </html>

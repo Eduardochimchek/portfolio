@@ -1,16 +1,19 @@
-# Portfólio de Eduardo Chimchek Jeronimo
+# PortfÃ³lio - Eduardo
 
-Bem-vindo ao meu portfólio! Aqui você encontrará informações sobre mim, meus projetos e como entrar em contato.
+![Resultado final do projeto](./assets/image/preview-site.jpg)
 
-## Sobre Mim
+### Deploy
+AplicaÃ§Ã£o em produÃ§Ã£o: [https://www.daanrox.com/](https://www.daanrox.com/)
 
-Eu sou um desenvolvedor Full-stack apaixonado por criar soluções inovadoras e escaláveis. Este é o meu espaço para compartilhar minha jornada e mostrar o que venho desenvolvendo.
+## Tecnologias Utilizadas
+- HTML
+- CSS
+- Javascript
+- SCSS
 
-## Como Executar
+## Contato
+Para entrar em contato:
+- Email : [eduardochimcheck@gmail.com](mailto:eduardochimcheck@gmail.com)
+- LinkedIn: [Eduardo Chimchek Jeronimo](https://www.linkedin.com/in/eduardo-chimchek-jeronimo-3539911a2/)
 
-Se quiser ver este portfólio em ação localmente, siga estas etapas:
-
-1. Clone este repositório:
-
-   ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
+--- 
