@@ -4,6 +4,6 @@ export function typeWrite(elemento) {
   textoArray.forEach(function (letra, i) {
     setTimeout(function () {
       elemento.innerHTML += letra;
-    }, 80 * i);
+    }, 141 * i);
   });
 }
