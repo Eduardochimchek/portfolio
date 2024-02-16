@@ -21,7 +21,15 @@
     <link rel="icon" href="./assets/image/logo-page.png" />
     <link rel="apple-touch-icon" href="./assets/image/logo-page.png" />
     <link rel="canonical" href="https://eduardochimchek.github.io/portfolio/" />
+
     <script src="./assets/js/svg-inject.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+    <script type="module" src="./assets/js/main.js"></script>
+
+    <audio autoplay loop volume="0.2">
+        <source src="./assets/audio/one-true-god-roniit-emptiness.mp3" type="audio/mpeg">
+    </audio>
+    
     <title>
         Eduardo Chimchek Jeronimo
     </title>
@@ -57,7 +65,6 @@
 
     <main>
         <section id="s-home">
-
             <div class="grid-layout">
                 <div id="home">
                     <div id="home-container-text">
@@ -70,14 +77,9 @@
                             impulsionam a eficiência e a produtividade do cliente. Apaixonado por Inteligência Artificial,
                             integro as melhores práticas para proporcionar uma experiência única aos usuários.
                         </p>
-                        <a href="https://www.instagram.com/Eduardo.jero/" rel="noopener" target="_blank"
-                            class="delayExtraBigReveal">
-                            Instagram
-                        </a>
                     </div>
 
-                    <img src="./assets/image/shape-body.png" alt="Ícone" onload="SVGInject(this)" id="logo"
-                        width="500px" height="500px" />
+                    <img src="./assets/image/shape-body.png" alt="Ícone" onload="SVGInject(this)" id="logo" width="500px" height="500px" />
                 </div>
             </div>
         </section>
@@ -133,18 +135,26 @@
             </div>
             <div class="social-buttons">
                 <div>
-                    <a href="https://wa.me/554899931541" class="social-button whatsappbutton" target="_blank"><img
-                            src="./assets/icons/whatsapp.svg" alt="Whatsapp"></a>
+                    <a href="https://wa.me/554899931541" class="social-button buttonSocial" target="_blank"><img src="./assets/icons/whatsapp.svg" alt="Whatsapp"></a>
+                </div>
+                <div>
+                    <a href="https://www.instagram.com/Eduardo.jero/" class="social-button buttonSocial" target="_blank"><img src="./assets/icons/instagram.svg" alt="Instagram"></a>
+                </div>
+                <div>
+                    <a href="https://www.linkedin.com/in/eduardo-chimchek-jeronimo-3539911a2/" class="social-button buttonSocial" target="_blank"><img src="./assets/icons/linkedin.svg" alt="Linkedin"></a>
+                </div>
+                <div>
+                    <a href="https://github.com/Eduardochimchek" class="social-button buttonSocial" target="_blank"><img src="./assets/icons/github.svg" alt="GitHub"></a>
                 </div>
             </div>
         </section>
 
         <section id="s-experience">
             <div class="grid-layout">
-                <h2 class="delaySmallReveal">Experiências <span>.</span></h2>
+                <h2 class="delaySmallReveal">Experiências</h2>
                 <div id="experience">
                     <div class="option-experience intervalCardReveal" id="experience-company">
-                        <div class="company metaspark activeExperience">
+                        <div class="company Agrosys activeExperience">
                             <h3>Agrosys</h3>
                         </div>
                         <!-- <div class="company takepic">
@@ -178,7 +188,7 @@
 
         <section id="s-projects">
             <div class="grid-layout">
-                <h2 class="delaySmallReveal">Projetos <span>.</span></h2>
+                <h2 class="delaySmallReveal">Projetos</h2>
                 <div id="projects">
                     <article class="intervalCardReveal teslabank">
                         <h3>App React</h3>
@@ -223,7 +233,7 @@
 
         <section id="s-services">
             <div class="grid-layout">
-                <h2 class="delaySmallReveal">Serviços <span>.</span></h2>
+                <h2 class="delaySmallReveal">Serviços</h2>
                 <div id="services">
                     <article class="intervalCardReveal">
                         <div>
@@ -265,7 +275,7 @@
             <div class="grid-layout">
                 <div id="skills">
                     <article id="skills-text">
-                        <h2 class="delaySmallReveal">Conhecimentos <span>.</span></h2>
+                        <h2 class="delaySmallReveal">Conhecimentos</h2>
                         <p class="delayMediumReveal changeDescription">
                             *passe o cursor do mouse no card para ler*
                         </p>
@@ -279,15 +289,13 @@
                             <img src="./assets/icons/css.svg" width="60px" height="60px" alt="Ícone do css" />
                         </article>
                         <article class="js intervalCardReveal">
-                            <img src="./assets/icons/javascript.svg" width="60px" height="60px"
-                                alt="Ícone do javascript" />
+                            <img src="./assets/icons/javascript.svg" width="60px" height="60px" alt="Ícone do javascript" />
                         </article>
                         <article class="react intervalCardReveal">
                             <img src="./assets/icons/react.svg" width="60px" height="60px" alt="Ícone do react" />
                         </article>
                         <article class="typescript intervalCardReveal">
-                            <img src="./assets/icons/typescript.svg" width="60px" height="60px"
-                                alt="Ícone do typescript" />
+                            <img src="./assets/icons/typescript.svg" width="60px" height="60px" alt="Ícone do typescript" />
                         </article>
                     </div>
                 </div>
@@ -306,12 +314,6 @@
             </div>
         </footer>
     </main>
-
-    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
-    <script type="module" src="./assets/js/main.js"></script>
-    <audio autoplay loop volume="0.2">
-        <source src="./assets/audio/one-true-god-roniit-emptiness.mp3" type="audio/mpeg">
-    </audio>
 </body>
 
 </html>
