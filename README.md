@@ -1,9 +1,9 @@
 # Portfólio - Eduardo
 
-### ![Resultado final do projeto](./assets/image/preview-site.jpg)
+### ![Resultado final do projeto](./assets/image/)
 
 ### Deploy
-### Aplicação em produção: [https://www.daanrox.com/](https://www.daanrox.com/)
+### Aplicação em produção: [https://www..com/](https://www..com/)
 
 ## Tecnologias Utilizadas
 - HTML
