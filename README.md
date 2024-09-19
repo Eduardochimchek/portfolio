@@ -2,8 +2,7 @@
 
 ### ![Resultado final do projeto](./assets/image/)
 
-### Deploy
-### Aplicação em produção: [https://www..com/](https://www..com/)
+### Aplicação em produção: [Meu portfólio](https://eduardochimchek.github.io/portfolio/)
 
 ## Tecnologias Utilizadas
 - HTML
