@@ -1,0 +1,74 @@
+.ambient {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.ambient__orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.35;
+  will-change: transform;
+
+  &--1 {
+    width: 60vw;
+    height: 60vw;
+    max-width: 700px;
+    max-height: 700px;
+    top: -20%;
+    right: -15%;
+    background: radial-gradient(circle, rgba(45, 212, 191, 0.15) 0%, transparent 70%);
+    animation: drift-1 25s ease-in-out infinite alternate;
+  }
+
+  &--2 {
+    width: 50vw;
+    height: 50vw;
+    max-width: 550px;
+    max-height: 550px;
+    bottom: 10%;
+    left: -20%;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+    animation: drift-2 30s ease-in-out infinite alternate;
+  }
+
+  &--3 {
+    width: 30vw;
+    height: 30vw;
+    max-width: 350px;
+    max-height: 350px;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: radial-gradient(circle, rgba(45, 212, 191, 0.08) 0%, transparent 70%);
+    animation: drift-3 20s ease-in-out infinite alternate;
+  }
+}
+
+.ambient__grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 20%, transparent 70%);
+}
+
+@keyframes drift-1 {
+  from { transform: translate(0, 0) scale(1); }
+  to { transform: translate(-5%, 8%) scale(1.05); }
+}
+
+@keyframes drift-2 {
+  from { transform: translate(0, 0) scale(1); }
+  to { transform: translate(8%, -5%) scale(1.08); }
+}
+
+@keyframes drift-3 {
+  from { transform: translateX(-50%) scale(1); opacity: 0.3; }
+  to { transform: translateX(-45%) scale(1.1); opacity: 0.5; }
+}

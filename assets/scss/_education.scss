@@ -1,0 +1,61 @@
+.education {
+  z-index: 1;
+}
+
+.education__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $grid-gap;
+  margin-top: 4rem;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.education__card {
+  padding: clamp(2.4rem, 4vw, 3.2rem);
+  background: $bg-surface;
+  border: 1px solid $border-subtle;
+  border-radius: $radius-lg;
+  transition: border-color $duration-normal $ease-out;
+
+  &:hover {
+    border-color: $border-medium;
+  }
+}
+
+.education__degree {
+  font-family: $font-display;
+  font-size: clamp(1.8rem, 3vw, 2rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.6rem;
+}
+
+.education__school {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: $text-secondary;
+  margin-bottom: 0.4rem;
+}
+
+.education__period {
+  display: block;
+  font-size: 1.3rem;
+  color: $accent;
+  margin-bottom: 1.2rem;
+}
+
+.education__note {
+  font-size: 1.5rem;
+  color: $text-muted;
+  line-height: 1.7;
+}
+
+.education__certs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 3.2rem;
+}

@@ -1,0 +1,91 @@
+.contact {
+  z-index: 1;
+}
+
+.contact__wrapper {
+  position: relative;
+  padding: clamp(4rem, 8vw, 6.4rem);
+  background: $bg-surface;
+  border: 1px solid $border-subtle;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 100%;
+    background: radial-gradient(ellipse, $accent-glow 0%, transparent 70%);
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}
+
+.contact__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 56rem;
+  margin-inline: auto;
+}
+
+.contact__title {
+  font-family: $font-display;
+  font-size: clamp(2.8rem, 5vw, 4rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin-bottom: 1.6rem;
+
+  em {
+    font-style: normal;
+    @include text-gradient;
+  }
+}
+
+.contact__text {
+  font-size: 1.7rem;
+  color: $text-secondary;
+  line-height: 1.7;
+  margin-bottom: 3.2rem;
+}
+
+.contact__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 3.2rem;
+}
+
+.contact__channels {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.4rem;
+  padding-top: 2.4rem;
+  border-top: 1px solid $border-subtle;
+}
+
+.contact__channel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 1.2rem;
+  color: $text-muted;
+  transition: color $duration-fast;
+
+  &:hover {
+    color: $accent;
+  }
+
+  strong {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: $text-secondary;
+  }
+}

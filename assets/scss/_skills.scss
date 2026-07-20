@@ -1,0 +1,112 @@
+.skills {
+  z-index: 1;
+}
+
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $grid-gap;
+  margin-top: 4rem;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.skills__group {
+  padding: clamp(2.4rem, 4vw, 3.2rem);
+  background: $bg-surface;
+  border: 1px solid $border-subtle;
+  border-radius: $radius-lg;
+  transition:
+    border-color $duration-normal $ease-out,
+    transform $duration-normal $ease-out;
+
+  &:hover {
+    border-color: $border-medium;
+    transform: translateY(-2px);
+  }
+}
+
+.skills__group-title {
+  font-family: $font-display;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: $text-primary;
+  margin-bottom: 2rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid $border-subtle;
+}
+
+.skills__items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.skill__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  background: $bg-elevated;
+  border: 1px solid $border-subtle;
+  border-radius: $radius-md;
+  flex-shrink: 0;
+
+  img {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+}
+
+.skill__info {
+  flex: 1;
+  min-width: 0;
+
+  .skill:not(:has(.skill__icon)) & {
+    padding-left: 0.4rem;
+  }
+}
+
+.skill__name {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: $text-primary;
+  margin-bottom: 0.6rem;
+}
+
+.skill__bar {
+  height: 3px;
+  background: $bg-elevated;
+  border-radius: $radius-full;
+  overflow: hidden;
+}
+
+.skill__fill {
+  height: 100%;
+  background: linear-gradient(90deg, $accent-secondary, $accent);
+  border-radius: $radius-full;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 1s $ease-out;
+
+  .reveal.is-visible & {
+    transform: scaleX(1);
+  }
+}
+
+.reveal.is-visible .skill:nth-child(1) .skill__fill { transition-delay: 0ms; }
+.reveal.is-visible .skill:nth-child(2) .skill__fill { transition-delay: 100ms; }
+.reveal.is-visible .skill:nth-child(3) .skill__fill { transition-delay: 200ms; }
+.reveal.is-visible .skill:nth-child(4) .skill__fill { transition-delay: 300ms; }
+.reveal.is-visible .skill:nth-child(5) .skill__fill { transition-delay: 400ms; }

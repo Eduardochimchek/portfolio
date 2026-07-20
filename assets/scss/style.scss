@@ -1,0 +1,18 @@
+@import "tokens";
+@import "reset";
+@import "base";
+@import "ambient";
+@import "header";
+@import "hero";
+@import "about";
+@import "experience";
+@import "education";
+@import "projects";
+@import "skills";
+@import "contact";
+@import "footer";
+
+main {
+  position: relative;
+  z-index: 1;
+}
