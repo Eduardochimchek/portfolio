@@ -28,25 +28,71 @@
 .site-logo {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.2rem;
   transition: opacity $duration-fast;
 
   &:hover {
-    opacity: 0.8;
+    opacity: 0.88;
+
+    .site-logo__mark {
+      border-color: rgba($accent, 0.45);
+      box-shadow: 0 0 20px $accent-glow;
+    }
+  }
+}
+
+.site-logo__mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.6rem;
+  height: 3.6rem;
+  flex-shrink: 0;
+  color: $accent;
+  background: $accent-soft;
+  border: 1px solid rgba($accent, 0.25);
+  border-radius: $radius-md;
+  transition:
+    border-color $duration-normal $ease-out,
+    box-shadow $duration-normal $ease-out;
+
+  svg {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+}
+
+.site-logo__brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  line-height: 1.2;
+}
+
+.site-logo__name {
+  font-family: $font-display;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: $text-primary;
+}
+
+.site-logo__role {
+  font-family: $font-body;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $text-muted;
+}
+
+@include mobile {
+  .site-logo__role {
+    display: none;
   }
 
-  img {
-    width: 2.8rem;
-    height: auto;
-    filter: brightness(0) saturate(100%) invert(78%) sepia(37%) saturate(629%) hue-rotate(122deg) brightness(95%) contrast(90%);
-  }
-
-  span {
-    font-family: $font-display;
-    font-size: 1.5rem;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    color: $text-primary;
+  .site-logo__name {
+    font-size: 1.6rem;
   }
 }
 
@@ -119,17 +165,26 @@
   }
 }
 
-.site-nav .btn--primary {
-  padding: 0.8rem 1.8rem;
-  font-size: 1.3rem;
-}
-
-.site-nav__cta {
+.site-nav__link.site-nav__cta {
   margin-left: 0.8rem;
+  color: $bg-deep;
+  background: $accent;
+  font-weight: 600;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 12px rgba(45, 212, 191, 0.2);
+
+  &:hover,
+  &.is-active {
+    color: $bg-deep;
+    background: $accent-hover;
+    box-shadow: 0 4px 20px $accent-glow;
+  }
 
   @include mobile {
     margin-left: 0;
     margin-top: 2rem;
+    font-size: 2rem;
+    padding: 1.4rem 2.8rem;
   }
 }
 
