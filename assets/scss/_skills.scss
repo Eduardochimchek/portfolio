@@ -1,78 +1,112 @@
-#s-skills {
-  @include spacing-section;
-  background-color: $bg-main;
+.skills {
+  z-index: 1;
+}
 
-  .grid-layout {
-    #skills {
-      @include flexbox-between;
-      height: auto;
-      padding: $gap-1;
-      div,
-      article {
-        width: 50%;
-        @include responsive-desktop {
-          width: 100%;
-        }
-      }
-      #skills-text {
-        min-height: 400px;
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $grid-gap;
+  margin-top: 4rem;
 
-        @include responsive-mobile {
-          min-height: auto;
-        }
-
-        h2 {
-          margin-bottom: $gap-4;
-          color: $color-white;
-          font: {
-            size: 3.2rem;
-            weight: 500;
-          }
-          span {
-            color: $color-main;
-          }
-        }
-        .changeDescription {
-          transition: 2s all ease;
-          @include responsive-mobile {
-            display: none;
-          }
-        }
-        p {
-          max-width: 500px;
-          line-height: 3.2rem;
-          color: $color-gray;
-          font: {
-            size: 1.8rem;
-          }
-        }
-      }
-      #skills-cards {
-        display: flex;
-        flex-wrap: wrap;
-        gap: $gap-3;
-        @include responsive-desktop {
-          margin-top: $gap-5;
-        }
-        article {
-          @include flexbox-between;
-          justify-content: center;
-          width: 20%;
-          flex-grow: 1;
-          height: 130px;
-          background-color: $bg-secondary;
-          position: relative;
-          border: 1px solid $bg-border;
-          border-radius: 4px;
-          transition: 1s all ease;
-          &:hover {
-            border: 1px solid hsl(287, 100%, 62%);
-          }
-          @include responsive-mobile {
-            width: 40%;
-          }
-        }
-      }
-    }
+  @include mobile {
+    grid-template-columns: 1fr;
   }
 }
+
+.skills__group {
+  padding: clamp(2.4rem, 4vw, 3.2rem);
+  background: $bg-surface;
+  border: 1px solid $border-subtle;
+  border-radius: $radius-lg;
+  transition:
+    border-color $duration-normal $ease-out,
+    transform $duration-normal $ease-out;
+
+  &:hover {
+    border-color: $border-medium;
+    transform: translateY(-2px);
+  }
+}
+
+.skills__group-title {
+  font-family: $font-display;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: $text-primary;
+  margin-bottom: 2rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid $border-subtle;
+}
+
+.skills__items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.skill__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  background: $bg-elevated;
+  border: 1px solid $border-subtle;
+  border-radius: $radius-md;
+  flex-shrink: 0;
+
+  img {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+}
+
+.skill__info {
+  flex: 1;
+  min-width: 0;
+
+  .skill:not(:has(.skill__icon)) & {
+    padding-left: 0.4rem;
+  }
+}
+
+.skill__name {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: $text-primary;
+  margin-bottom: 0.6rem;
+}
+
+.skill__bar {
+  height: 3px;
+  background: $bg-elevated;
+  border-radius: $radius-full;
+  overflow: hidden;
+}
+
+.skill__fill {
+  height: 100%;
+  background: linear-gradient(90deg, $accent-secondary, $accent);
+  border-radius: $radius-full;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 1s $ease-out;
+
+  .reveal.is-visible & {
+    transform: scaleX(1);
+  }
+}
+
+.reveal.is-visible .skill:nth-child(1) .skill__fill { transition-delay: 0ms; }
+.reveal.is-visible .skill:nth-child(2) .skill__fill { transition-delay: 100ms; }
+.reveal.is-visible .skill:nth-child(3) .skill__fill { transition-delay: 200ms; }
+.reveal.is-visible .skill:nth-child(4) .skill__fill { transition-delay: 300ms; }
+.reveal.is-visible .skill:nth-child(5) .skill__fill { transition-delay: 400ms; }

@@ -1,107 +1,158 @@
-#s-projects {
-  @include spacing-section;
-  text-align: center;
-  background-color: $bg-main;
-  .grid-layout {
-    h2 {
-      @include title-section();
-      span {
-        color: $color-main;
-      }
+.projects {
+  z-index: 1;
+}
+
+.projects__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: clamp(4rem, 8vw, 6rem);
+
+  @include mobile {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.6rem;
+  }
+}
+
+.projects__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.project {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: start;
+  padding: clamp(3rem, 5vw, 4.8rem) 0;
+  border-top: 1px solid $border-subtle;
+  transition: background $duration-normal $ease-out;
+
+  &:last-child {
+    border-bottom: 1px solid $border-subtle;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, $accent-soft 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity $duration-normal $ease-out;
+    pointer-events: none;
+    border-radius: $radius-md;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+
+  @include tablet {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+}
+
+.project__index {
+  font-family: $font-display;
+  font-size: clamp(3rem, 5vw, 4.8rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: $text-muted;
+  opacity: 0.4;
+  transition:
+    color $duration-normal $ease-out,
+    opacity $duration-normal $ease-out;
+
+  .project:hover & {
+    color: $accent;
+    opacity: 1;
+  }
+}
+
+.project__body {
+  position: relative;
+  z-index: 1;
+}
+
+.project__title {
+  font-family: $font-display;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+  transition: color $duration-fast;
+
+  .project:hover & {
+    color: $text-primary;
+  }
+}
+
+.project__description {
+  font-size: 1.6rem;
+  color: $text-secondary;
+  line-height: 1.7;
+  max-width: 52ch;
+  margin-bottom: 1.6rem;
+}
+
+.project__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.project__link {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.8rem;
+  height: 4.8rem;
+  border: 1px solid $border-medium;
+  border-radius: 50%;
+  color: $text-secondary;
+  transition:
+    border-color $duration-normal $ease-out,
+    color $duration-normal $ease-out,
+    background $duration-normal $ease-out,
+    transform $duration-normal $ease-out;
+
+  svg {
+    width: 1.8rem;
+    height: 1.8rem;
+    transition: transform $duration-normal $ease-out;
+  }
+
+  &:hover {
+    border-color: $accent;
+    color: $accent;
+    background: $accent-soft;
+    transform: rotate(-45deg);
+
+    svg {
+      transform: translate(1px, -1px);
     }
-    #projects {
-      margin: $gap-3 0px;
-      @include flexbox-between;
-      text-align: left;
-      .teslabank {
-        border: 1px solid hsl(287, 100%, 62%);
-        &:hover {
-          border: 1px solid hsl(287, 100%, 62%);
-        }
-      }
-      .naped {
-        border: 1px solid hsl(287, 100%, 62%);
-        &:hover {
-          border: 1px solid hsl(287, 100%, 62%);
-        }
-      }
-      .efront {
-        border: 1px solid hsl(287, 100%, 62%);
-        &:hover {
-          border: 1px solid hsl(287, 100%, 62%);
-        }
-      }
-      > article {
-        background-color: $bg-secondary;
+  }
 
-        @include block-article;
-        height: auto;
-        h3 {
-          color: $color-white;
-          font: {
-            size: 2.4rem;
-            weight: 500;
-          }
-        }
-        p {
-          line-height: $gap-3;
-          margin: $gap-3 $gap-0;
-          color: $color-gray;
-          line-height: 3.2rem;
-          font: {
-            size: 1.8rem;
-          }
-        }
-      }
-    }
-    #teslabank {
-      color: hsl(287, 100%, 62%);
+  @include tablet {
+    grid-column: 2;
+    justify-self: start;
+  }
 
-      &::after {
-        background: linear-gradient(270deg, hsl(287, 100%, 62%) 0%, #17161d 100%);
-      }
-    }
-
-    #naped {
-      color: hsl(287, 100%, 62%);
-
-      &::after {
-        background: linear-gradient(270deg, hsl(287, 100%, 62%) 0%, #17161d 100%);
-      }
-    }
-
-    #efront {
-      color: hsl(287, 100%, 62%);
-
-      &::after {
-        background: linear-gradient(270deg, hsl(287, 100%, 62%) 0%, #17161d 100%);
-      }
-    }
-
-    a {
-      color: $color-main;
-      position: relative;
-      @include hover-link();
-      &::after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        transform: scaleX(0);
-        height: 1px;
-        bottom: -7px;
-        left: 0;
-
-        transform-origin: bottom right;
-        transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
-      }
-      font: {
-        size: 2rem;
-        weight: 400;
-      }
-      &:hover::after {
-        transform: scaleX(1);
-        transform-origin: bottom left;
-      }
-    }
+  @include mobile {
+    justify-self: start;
   }
 }

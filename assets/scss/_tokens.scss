@@ -1,0 +1,60 @@
+// Design tokens
+$font-display: "Sora", system-ui, sans-serif;
+$font-body: "Inter", system-ui, sans-serif;
+
+$bg-deep: #030712;
+$bg-surface: #0c1222;
+$bg-elevated: #121a2e;
+
+$border-subtle: rgba(255, 255, 255, 0.06);
+$border-medium: rgba(255, 255, 255, 0.1);
+
+$text-primary: #f1f5f9;
+$text-secondary: #94a3b8;
+$text-muted: #7b8da8;
+
+$accent: #2dd4bf;
+$accent-soft: rgba(45, 212, 191, 0.12);
+$accent-glow: rgba(45, 212, 191, 0.25);
+$accent-secondary: #6366f1;
+
+$container-max: 1120px;
+$section-gap: clamp(6rem, 12vw, 10rem);
+$grid-gap: clamp(1.5rem, 3vw, 2rem);
+
+$radius-sm: 6px;
+$radius-md: 12px;
+$radius-lg: 20px;
+$radius-full: 9999px;
+
+$ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+$duration-fast: 150ms;
+$duration-normal: 300ms;
+$duration-slow: 600ms;
+
+$bp-tablet: 992px;
+$bp-mobile: 768px;
+
+@mixin tablet {
+  @media (max-width: $bp-tablet) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $bp-mobile) {
+    @content;
+  }
+}
+
+@mixin focus-ring {
+  outline: 2px solid $accent;
+  outline-offset: 3px;
+}
+
+@mixin text-gradient {
+  background: linear-gradient(135deg, $text-primary 0%, $accent 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

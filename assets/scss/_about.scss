@@ -1,130 +1,138 @@
-#s-about {
-  padding: $gap-7 0px;
-  background-color: $bg-main;
+.about {
+  z-index: 1;
+}
 
-  @include responsive-desktop {
-    padding: $gap-7 20px;
+.about__grid {
+  display: grid;
+  grid-template-columns: 28rem 1fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: start;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 3.2rem;
+  }
+}
+
+.about__visual {
+  position: relative;
+
+  @include tablet {
+    max-width: 28rem;
+  }
+}
+
+.about__photo {
+  aspect-ratio: 3 / 4;
+  border-radius: $radius-lg;
+  background:
+    linear-gradient(160deg, $accent-soft 0%, transparent 50%),
+    url("../image/selfie-Eduardo.jpg") center / cover no-repeat;
+  border: 1px solid $border-subtle;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(3, 7, 18, 0.4) 0%, transparent 40%);
+    pointer-events: none;
+  }
+}
+
+.about__photo-glow {
+  position: absolute;
+  inset: -20%;
+  background: radial-gradient(circle at 30% 70%, $accent-glow 0%, transparent 60%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.about__content {
+  padding-top: 1rem;
+}
+
+.about__bio {
+  font-size: 1.7rem;
+  color: $text-secondary;
+  line-height: 1.8;
+  margin-bottom: 2.4rem;
+
+  p + p {
+    margin-top: 1.6rem;
+  }
+}
+
+.about__highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  margin-bottom: 3.2rem;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.about__highlight {
+  padding: 2rem;
+  background: $bg-surface;
+  border: 1px solid $border-subtle;
+  border-radius: $radius-md;
+  transition: border-color $duration-normal $ease-out;
+
+  &:hover {
+    border-color: $border-medium;
+  }
+}
+
+.about__highlight-value {
+  display: block;
+  font-family: $font-display;
+  font-size: 2.4rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: $text-primary;
+  margin-bottom: 0.4rem;
+}
+
+.about__highlight-label {
+  font-size: 1.3rem;
+  color: $text-muted;
+}
+
+.about__social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.8rem 1.6rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: $text-secondary;
+  background: $bg-surface;
+  border: 1px solid $border-subtle;
+  border-radius: $radius-full;
+  transition:
+    color $duration-fast,
+    border-color $duration-fast,
+    background $duration-fast;
+
+  &:hover {
+    color: $text-primary;
+    border-color: $accent;
+    background: $accent-soft;
   }
 
-  .grid-layout {
-    > div {
-      background-color: $bg-secondary;
-      border: 2px solid $bg-border;
-      padding: $gap-3;
-      border-radius: 4px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: auto;
-
-      @include responsive-desktop {
-        flex-wrap: wrap;
-        gap: $gap-4;
-      }
-
-      #creator-photo {
-        width: 47%;
-        background-image: url("../image/selfie-Eduardo.jpg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        border-radius: 4px;
-        height: 500px;
-
-        @include responsive-desktop {
-          width: 100%;
-          height: 400px;
-        }
-
-        @include responsive-tablet {
-          height: 350px;
-        }
-
-        @include responsive-mobile {
-          height: 300px;
-        }
-
-
-        h3 {
-          color: $bg-main;
-          background-color: $color-white;
-          padding: $gap-1;
-          border-radius: 16px;
-          width: 180px;
-          text-align: center;
-          font-size: 1.4rem;
-          font-weight: 500;
-          margin: $gap-2;
-        }
-      }
-
-      div:nth-child(2) {
-        width: 49%;
-
-        @include responsive-desktop {
-          width: 100%;
-        }
-
-        h2 {
-          font-size: 4rem;
-          font-weight: 500;
-          margin: $gap-2 $gap-0;
-          color: $color-white;
-
-          @include responsive-tablet {
-            font-size: 3.2rem;
-          }
-        }
-
-        h3 {
-          font-size: 1.8rem;
-          font-weight: 300;
-          margin-bottom: $gap-2;
-          color: $color-white;
-        }
-
-        h4 {
-          font-size: 2rem;
-          font-weight: 500;
-          color: $color-main;
-        }
-
-        p {
-          font-size: 1.8rem;
-          color: $color-gray;
-          line-height: 160%;
-          margin: $gap-4 0px $gap-5 0px;
-        }
-
-        nav {
-          ul {
-            display: flex;
-            align-items: center;
-            gap: $gap-2;
-
-            @include responsive-desktop {
-              flex-wrap: wrap;
-            }
-
-            a {
-              background-color: $bg-main;
-              border: 2px solid $bg-border;
-              border-radius: 6px;
-              padding: $gap-2;
-
-              @include responsive-desktop {
-                img {
-                  width: 40px;
-                }
-              }
-
-              &:hover {
-                border-color: $color-main;
-              }
-            }
-          }
-        }
-      }
-    }
+  svg {
+    width: 1.6rem;
+    height: 1.6rem;
+    flex-shrink: 0;
   }
 }

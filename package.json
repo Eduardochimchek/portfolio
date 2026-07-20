@@ -1,0 +1,19 @@
+{
+  "name": "portfolio-eduardo",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Portfolio autoral de Eduardo Chimchek Jeronimo",
+  "scripts": {
+    "build:css": "sass assets/scss/style.scss assets/css/style.css --style=compressed --no-source-map --silence-deprecation=import",
+    "watch:css": "sass assets/scss/style.scss assets/css/style.css --watch --silence-deprecation=import",
+    "lint:js": "eslint assets/js/app.js",
+    "lint:html": "html-validate index.html",
+    "lint": "npm run lint:js && npm run lint:html",
+    "build": "npm run build:css"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.2",
+    "html-validate": "^9.7.1",
+    "sass": "^1.77.0"
+  }
+}

@@ -1,18 +1,26 @@
-# Portf√≥lio - Eduardo
+# Portfolio ? Eduardo Chimchek Jeronimo
 
-### ![Resultado final do projeto](./assets/image/)
+Portfolio autoral de Eduardo Chimchek Jeronimo, desenvolvedor Full-Stack.
 
-### Aplica√ß√£o em produ√ß√£o: [Meu portf√≥lio](https://eduardochimchek.github.io/portfolio/)
+**ProduÁ„o:** [eduardochimchek.github.io/portfolio](https://eduardochimchek.github.io/portfolio/)
 
-## Tecnologias Utilizadas
-- HTML
-- CSS
-- Javascript
-- SCSS
+## Stack
+
+- HTML5 sem‚ntico
+- SCSS (design system modular)
+- JavaScript (vanilla)
+- GitHub Pages
+
+## Desenvolvimento
+
+```bash
+npm install
+npm run watch:css   # compila SCSS em tempo real
+npm run lint        # valida HTML e JavaScript
+npm run build       # build de produÁ„o
+```
 
 ## Contato
-Para entrar em contato:
-- Email : [eduardochimcheck@gmail.com](mailto:eduardochimcheck@gmail.com)
-- LinkedIn: [Eduardo Chimchek Jeronimo](https://www.linkedin.com/in/eduardo-chimchek-jeronimo-3539911a2/)
 
---- 
+- **E-mail:** eduardochimcheck@gmail.com
+- **LinkedIn:** [Eduardo Chimchek Jeronimo](https://www.linkedin.com/in/eduardo-chimchek-jeronimo-3539911a2/)

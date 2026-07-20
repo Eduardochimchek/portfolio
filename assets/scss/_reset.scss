@@ -1,60 +1,69 @@
-* {
-  padding: 0;
-  margin: 0;
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  font-family: $font-main;
+  margin: 0;
+  padding: 0;
 }
-::selection {
-  background-color: $color-main;
-  color: $color-white;
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: $bg-deep;
+  color: $text-primary;
+  font-family: $font-body;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
 ul,
 ol {
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
-a {
-  text-decoration: none;
+
+::selection {
+  background: $accent-soft;
+  color: $text-primary;
 }
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+
+:focus-visible {
+  @include focus-ring;
 }
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-}
-button,
-input {
-  border: 0;
-  font-family: $font-main;
-  &:focus {
-    border: 0;
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
-}
-body {
-  font-family: $font-main;
-  background-color: $color-white;
-  overflow-x: hidden;
-}
-html {
-  scroll-behavior: smooth;
-  font-size: 62.5%;
-}
-::-webkit-scrollbar {
-  width: $gap-1;
-}
-::-webkit-scrollbar-track {
-  background-color: $bg-main;
-}
-::-webkit-scrollbar-thumb {
-  background-color: $color-main;
-  border-radius: $gap-1;
 }

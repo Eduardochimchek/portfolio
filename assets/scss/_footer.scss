@@ -1,45 +1,53 @@
-footer {
-  width: 100%;
-  height: auto;
-  background-color: $bg-secondary;
-  color: $color-white;
-  padding: $gap-3 0px;
+.site-footer {
+  padding-block: 3.2rem;
+  padding-bottom: max(3.2rem, env(safe-area-inset-bottom));
+  border-top: 1px solid $border-subtle;
+  position: relative;
+  z-index: 1;
+}
 
-  .grid-layout {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-  }
+.site-footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.6rem;
+}
 
-  p {
-    font-size: 1.8rem;
-    a {
-      font-weight: 500;
-      color: $color-main;
+.site-footer__copy {
+  font-size: 1.3rem;
+  color: $text-muted;
+
+  a {
+    color: $text-secondary;
+    transition: color $duration-fast;
+
+    &:hover {
+      color: $accent;
     }
   }
+}
 
-  img {
-    width: 32px;
+.site-footer__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: $text-muted;
+  transition: color $duration-fast;
+
+  &:hover {
+    color: $accent;
   }
 
-  div {
-    display: flex;
-    align-items: center;
-    gap: $gap-2;
+  svg {
+    width: 1.4rem;
+    height: 1.4rem;
+    transition: transform $duration-normal $ease-out;
   }
 
-  @include responsive-desktop {
-    .grid-layout {
-      text-align: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: $gap-5;
-
-      div {
-        display: none;
-      }
-    }
+  &:hover svg {
+    transform: translateY(-2px);
   }
 }

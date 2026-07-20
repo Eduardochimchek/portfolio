@@ -1,24 +1,17 @@
-@import "./variables", "./reset", "./menu", "./home", "./about", "./experience",
-  "./projects", "./services", "./skills", "./footer";
+@import "tokens";
+@import "reset";
+@import "base";
+@import "ambient";
+@import "header";
+@import "hero";
+@import "about";
+@import "experience";
+@import "projects";
+@import "skills";
+@import "contact";
+@import "footer";
 
-.typewriter:after {
-  content: "|";
-  margin-left: $gap-1;
-  opacity: 1;
-  animation: blink 1s infinite;
-  color: $color-main;
-}
-
-@keyframes blink {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-}
-
-.grid-layout {
-  @include grid-layout();
+main {
+  position: relative;
+  z-index: 1;
 }
