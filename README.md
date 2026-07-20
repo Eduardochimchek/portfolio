@@ -2,11 +2,11 @@
 
 Portfolio autoral de Eduardo Chimchek Jeronimo, desenvolvedor Full-Stack.
 
-**ProduÁ„o:** [eduardochimchek.github.io/portfolio](https://eduardochimchek.github.io/portfolio/)
+**Produ√ß√£o:** [eduardochimchek.github.io/portfolio](https://eduardochimchek.github.io/portfolio/)
 
 ## Stack
 
-- HTML5 sem‚ntico
+- HTML5 sem√¢ntico
 - SCSS (design system modular)
 - JavaScript (vanilla)
 - GitHub Pages
@@ -17,7 +17,7 @@ Portfolio autoral de Eduardo Chimchek Jeronimo, desenvolvedor Full-Stack.
 npm install
 npm run watch:css   # compila SCSS em tempo real
 npm run lint        # valida HTML e JavaScript
-npm run build       # build de produÁ„o
+npm run build       # build de produ√ß√£o
 ```
 
 ## Contato
